@@ -1,0 +1,51 @@
+name: Skills
+icon: chart
+label: "| {{ skillstitle }}"
+fields:
+  skillsHeadline:
+    label: Skills
+    type: headline
+    numbered: false
+  skillsLabel:
+    label: Label
+    type: text
+  skillsTitle:
+    label: Title
+    type: text
+  architectures:
+    label: Architectures
+    type: structure
+    columns:
+      title:
+        width: 1/3
+      technologies:
+        width: 1/3
+      projects:
+        width: 1/3
+    fields:
+      title:
+        label: Title
+        type: text
+        required: true
+      technologies:
+        label: Technologies
+        type: tags
+      paragraph:
+        label: Paragraph
+        type: writer
+        inline: true
+      projects:
+        label: Projects
+        type: pages
+        query: site.find('projects').children
+  lineA:
+    type: line
+  skillsImage:
+    label: Image
+    type: files
+    multiple: false
+    layout: cards
+    image:
+      ratio: 4/5
+      cover: true
+    required: true

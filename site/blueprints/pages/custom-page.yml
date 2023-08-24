@@ -1,0 +1,41 @@
+title: Custom Page
+icon: page
+
+tabs:
+  content:
+    icon: text
+
+    columns:
+      - width: 1/4
+        sections:
+        fields:
+          gap-a:
+            type: gap
+      
+
+
+      - width: 1/2
+        sections:
+        fields:
+          customPageHeaderHeadline:
+            label: Hero/header
+            type: headline
+          customPageHeader:
+            label: Hero/header block
+            extends: fields/blocks-hero
+          line-a:
+            type: line
+          customPageContentHeadline:
+            label: Building blocks
+            type: headline
+          customPageContent:
+            label: Building blocks
+            extends: fields/blocks-custom
+          
+
+
+      - width: 1/4
+        sections:
+        fields:
+          gap-b:
+            type: gap

@@ -1,0 +1,21 @@
+name: Highlighted projects
+icon: grid
+label: "| {{ highlightedprojectstitle }}"
+fields:
+  highlightedProjectsHeadline:
+    label: Highlighted projects
+    type: headline
+    numbered: false
+  highlightedProjectsTitle:
+    label: Title
+    type: text
+  highlightedProjectsParagraph:
+    label: Paragraph
+    type: writer
+    inline: true
+  lineA:
+    type: line
+  highlightedProjects:
+    label: Highlighted projects
+    type: pages
+    query: site.find('projects').children

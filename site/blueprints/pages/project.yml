@@ -70,7 +70,7 @@ columns:
               - Front-end development
               - Back-end development
               - Web development
-            help: e.g. UX, UI, Front-end, Back-end
+            help: **e.g.** UX, UI, Front-end, Back-end
             width: 1/2
             required: true
           technologies:
@@ -85,12 +85,17 @@ columns:
               - TailwindCSS
               - React
               - Next.js
-            help: e.g. HTML, CSS, React
+            help: **e.g.** HTML, CSS, React
             width: 1/2
             required: true
-          categories:
-            label: Categories (no data)
-            type: text
+          category:
+            label: Category
+            type: tags
+            options: query
+            query: page('projects').tags.split
+            accept: options
+            help: Select one or more categories for this project
+            required: true
 
 
 

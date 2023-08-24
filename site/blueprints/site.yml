@@ -1,5 +1,26 @@
-title: Site
+title: PO - Starter Kit
 
-sections:
-  pages:
-    type: pages
+tabs:
+  menu:
+    icon: dashboard
+
+    columns:
+
+      #Pages
+      - width: 1/3
+        sections:
+          listed:
+            headline: Listed pages
+            type: pages
+            status: listed
+            image: icon
+          unlisted:
+            headline: Unlisted pages
+            type: pages
+            status: unlisted
+            image: icon
+          drafts:
+            headline: Pages in draft
+            type: pages
+            status: draft
+            image: icon

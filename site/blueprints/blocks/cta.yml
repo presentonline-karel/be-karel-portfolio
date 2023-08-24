@@ -1,0 +1,19 @@
+name: CTA
+icon: bell
+label: "| {{ ctatitle }}"
+fields:
+  ctaHeadline:
+    label: CTA
+    type: headline
+    numbered: false
+  ctaTitle:
+    label: Title
+    type: text
+  ctaParagraph:
+    label: Paragraph
+    type: writer
+    inline: true
+  ctaButtons:
+    label: Buttons
+    extends: fields/button
+  #addBgColorOption

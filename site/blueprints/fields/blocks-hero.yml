@@ -1,0 +1,6 @@
+type: blocks
+max: 1
+fieldsets:
+  - heroPrimary
+  - heroSecondary
+  - header

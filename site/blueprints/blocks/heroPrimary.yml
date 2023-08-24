@@ -1,0 +1,32 @@
+name: Hero primary
+icon: grid-top
+label: "| {{ herotitle }}"
+fields:
+  heroHeadline:
+    label: Hero Primary
+    type: headline
+    numbered: false
+  heroLabel:
+    label: Label
+    type: text
+  heroTitle:
+    label: Title
+    type: text
+  heroParagraph:
+    label: Paragraph
+    type: writer
+    inline: true
+  heroButtons:
+    label: Buttons
+    extends: fields/button
+  line-z:
+    type: line
+  heroImage:
+    label: Image
+    type: files
+    multiple: false
+    layout: cards
+    required: true
+    image:
+      ratio: 1/1
+      cover: true

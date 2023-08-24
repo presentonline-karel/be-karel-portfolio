@@ -1,0 +1,38 @@
+name: Services
+icon: cog
+label: "| {{ servicestitle }}"
+fields:
+  servicesHeadline:
+    label: Services
+    type: headline
+    numbered: false
+  servicesLabel:
+    label: Label
+    type: text
+  servicesTitle:
+    label: Title
+    type: text
+  services:
+    label: Services
+    type: structure
+    columns:
+      title:
+        width: 1/4
+      paragraph:
+        width: 2/4
+      destination:
+        width: 1/4
+    fields:
+      title:
+        label: Title
+        type: text
+        required: true
+      paragraph:
+        label: Paragraph
+        type: writer
+        inline: true
+        required: true
+      destination:
+        label: Destination page
+        type: pages
+        max: 1

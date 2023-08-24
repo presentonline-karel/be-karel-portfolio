@@ -23,7 +23,7 @@ columns:
         options:
           - Web development
           - Web design
-        help: e.g. Web development, Web design
+        help: **e.g.** Web development, Web design
         required: true
 
 
@@ -38,14 +38,14 @@ columns:
             label: Projects
             type: headline
             numbered: false
-      projectsDrafts:
-        label: Drafts
+      projectsListed:
+        label: Listed projects
         type: pages
-        status: draft
-        layout: cardlets
-        template: project
+        status: listed
+        layout: cards
+        size: small
         image:
-          query: page.carouselImages.toFiles().first()
+          query: page.carouselImages.first().toFile()
           cover: true
       projectsUnlisted:
         label: Unlisted projects
@@ -55,12 +55,12 @@ columns:
         image:
           query: page.carouselImages.first().toFile()
           cover: true
-      projectsListed:
-        label: Listed projects
+      projectsDrafts:
+        label: Drafts
         type: pages
-        status: listed
-        layout: cards
-        size: small
+        status: draft
+        layout: cardlets
+        template: project
         image:
-          query: page.carouselImages.first().toFile()
+          query: page.carouselImages.toFiles().first()
           cover: true

@@ -1,0 +1,6 @@
+type: blocks
+fieldsets:
+  - highlightedProjects
+  - services
+  - skills
+  - cta
