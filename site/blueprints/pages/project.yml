@@ -102,18 +102,15 @@ columns:
         label: Images
         type: headline
         numbered: false
-      cover:
-        label: Cover
+      carouselImages:
+        label: Carousel images
         type: files
-        multiple: false
         layout: cards
+        size: tiny
         image:
           ratio: 4/3
           cover: true
         required: true
-      carouselImages:
-        label: Carousel images
-        type: files
       lineB:
         type: line
       contentHeadline:
@@ -138,4 +135,19 @@ columns:
           - list
         width: 2/3
         required: true
-      
+      lineC:
+        type: line
+      relatedProjectsHeadline:
+        label: Related projects
+        type: headline
+      relatedProjectsTitle:
+        label: Title
+        type: text
+      relatedProjects:
+        label: Related projects
+        type: pages
+        query: page.siblings(false)
+        max: 2
+        layout: cardlets
+        image:
+          cover: true

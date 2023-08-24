@@ -1,0 +1,84 @@
+type: structure
+max: 2
+columns:
+  typeOfButton:
+    width: 2/8
+  anchor:
+    width: 2/8
+  destination:
+    width: 2/8
+  internalPage:
+    width: 2/8
+fields:
+  anchor:
+    label: Button text
+    type: text
+    required: true
+  icon:
+    label: Icon
+    type: radio
+    required: true
+    width: 1/2
+    options:
+      noIcon: No icon
+      chevronRight: Chevron right
+      chevronDown: Chevron down
+      arrowRight: Arrow right
+      arrowRightTop: Arrow right top
+      arrowDown: Arrow down
+  iconPlacement:
+    label: Icon place
+    type: toggle
+    text: 
+      - "right"
+      - "left"
+    width: 1/2
+  typeOfButton:
+    label: Type
+    type: radio
+    required: true
+    options:
+      button-primary: Primary
+      button-secondary: Secondary
+      button-tertiary: Tertiary
+  destination:
+    label: Link
+    type: select
+    max: 1
+    required: true
+    options:
+      internal: Internal webpage
+      external: External webpage
+      call: Call
+      email: Mail
+  internalPage:
+    label: Internal webpage
+    type: pages
+    max: 1
+    required: true
+    width: 3/4
+    image: icon
+    when:
+      destination: internal
+  idPage:
+    label: id on page
+    type: text
+    width: 1/4
+    when:
+      destination: internal
+  externalUrl:
+    label: External webpage
+    type: url
+    required: true
+    when:
+      destination: external
+  callInfo:
+    label: Info for call button
+    type: info
+    when:
+      destination: call
+  emailInfo:
+    label: Info for mail button
+    type: info
+    when:
+      destination: email
