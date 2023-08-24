@@ -1,0 +1,141 @@
+title: Project
+
+columns:
+  left:
+    width: 1/2
+    sections:
+      fields:
+        type: fields
+        fields:
+          metaInfoHeadline:
+            label: Meta info
+            type: headline
+            width: 2/4
+          period:
+            label: Period
+            type: text
+            width: 1/4
+            required: true
+          isProjectNew:
+            label: Add "New" label
+            type: toggle
+            text: 
+              - "no"
+              - "yes"
+            width: 1/4
+          shortTitle:
+            label: Short title
+            type: text
+            width: 1/2
+            required: true
+          longTitle:
+            label: Full title
+            type: text
+            width: 1/2
+            required: true
+          description:
+            label: Short Description
+            type: writer
+            inline: true
+            required: true
+          descriptionCard:
+            label: Full Description
+            type: writer
+            inline: true
+            required: true
+          lineA:
+            type: line
+          otherInfoHeadline:
+            label: Other info
+            type: headline
+          urls:
+            label: URLs
+            type: object
+            fields:
+              liveUrl:
+                label: Live URL
+                type: url
+              figmaUrl:
+                label: Figma file
+                type: url
+              githubUrl:
+                label: GitHub repo
+                type: url
+          tags:
+            label: Tags
+            type: tags
+            options:
+              - UX
+              - UI
+              - Front-end development
+              - Back-end development
+              - Web development
+            help: e.g. UX, UI, Front-end, Back-end
+            width: 1/2
+            required: true
+          technologies:
+            label: Technologies used
+            type: tags
+            options:
+              - Figma
+              - HTML
+              - Sass
+              - JavaScript
+              - KirbyCMS
+              - TailwindCSS
+              - React
+              - Next.js
+            help: e.g. HTML, CSS, React
+            width: 1/2
+            required: true
+          categories:
+            label: Categories (no data)
+            type: text
+
+
+
+  right:
+    width: 1/2
+    type: fields
+    fields:
+      imagesHeadline:
+        label: Images
+        type: headline
+        numbered: false
+      cover:
+        label: Cover
+        type: files
+        multiple: false
+        layout: cards
+        image:
+          ratio: 4/3
+          cover: true
+        required: true
+      carouselImages:
+        label: Carousel images
+        type: files
+      lineB:
+        type: line
+      contentHeadline:
+        label: Problem/solution section
+        type: headline
+      contentImage:
+        label: Image
+        type: files
+        multiple: false
+        layout: cards
+        image:
+          ratio: 4/5
+          cover: true
+        width: 1/3
+        required: true
+      contentText:
+        label: Text
+        type: blocks
+        fieldsets:
+          - heading
+          - text
+          - list
+        width: 2/3
+        required: true
+      
