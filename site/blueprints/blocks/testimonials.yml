@@ -1,0 +1,63 @@
+name: Testimonials
+icon: quote
+label: "| {{ testimonialstitle }}"
+fields:
+  testimonialsHeadline:
+    label: Testimonials
+    type: headline
+    numbered: false
+  testimonialsLabel:
+    label: Label
+    type: text
+    required: true
+  testimonialsTitle:
+    label: Title
+    type: text
+    required: true
+  testimonialsButton:
+    label: Button
+    extends: fields/button
+  testimonials:
+    label: Testimonials
+    type: structure
+    required: true
+    columns:
+      testimonial:
+        width: 2/6
+      author:
+        width: 1/6
+      function:
+        width: 1/6
+      company:
+        width: 1/6
+      addWebsite:
+        width: 1/6
+    fields:
+      testimonial:
+        label: Testimonial
+        type: writer
+        inline: true
+        required: true
+      author:
+        label: Author
+        type: text
+        required: true
+      function:
+        label: Function
+        type: text
+        required: true
+      company:
+        label: Company
+        type: text
+      addWebsite:
+        label: Add company website?
+        type: toggle
+        text:
+          - "no"
+          - "yes"
+      website:
+        label: Company website
+        type: url
+        required: true
+        when:
+          addWebsite: true

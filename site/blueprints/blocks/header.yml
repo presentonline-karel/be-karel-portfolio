@@ -1,0 +1,16 @@
+name: Header
+icon: grid-top
+label: "| {{ headertitle }}"
+fields:
+  headerHeadline:
+    label: Header
+    type: headline
+    numbered: false
+  headerTitle:
+    label: Title
+    type: text
+    required: true
+  headerParagraph:
+    label: Paragraph
+    type: writer
+    inline: true

@@ -1,9 +1,9 @@
-name: Hero primary
+name: Hero secondary
 icon: grid-top
 label: "| {{ herotitle }}"
 fields:
   heroHeadline:
-    label: Hero primary
+    label: Hero secondary
     type: headline
     numbered: false
   heroLabel:
@@ -28,5 +28,5 @@ fields:
     layout: cards
     required: true
     image:
-      ratio: 1/1
+      ratio: 3/2
       cover: true

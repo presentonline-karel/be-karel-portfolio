@@ -1,0 +1,46 @@
+name: Features
+icon: flag
+label: "| {{ featurestitle }}"
+fields:
+  featuresHeadline:
+    label: Features
+    type: headline
+    numbered: false
+  featuresLabel:
+    label: Label
+    type: text
+    required: true
+  featuresTitle:
+    label: Title
+    type: text
+    required: true
+  features:
+    label: Features
+    type: structure
+    required: true
+    columns:
+      icon:
+        width: 1/6
+      title:
+        width: 2/6
+      paragraph:
+        width: 3/6
+    fields:
+      icon:
+        label: Icon
+        type: select
+        required: true
+        options:
+          table: Table
+          gear: Gear
+          pointer: Pointer
+          plus: Plus
+      title:
+        label: Title
+        type: text
+        required: true
+      paragraph:
+        label: Paragraph
+        type: writer
+        inline: true
+        required: true

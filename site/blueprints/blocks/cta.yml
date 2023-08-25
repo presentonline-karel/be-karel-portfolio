@@ -16,4 +16,11 @@ fields:
   ctaButtons:
     label: Buttons
     extends: fields/button
-  #addBgColorOption
+  ctaBgColor:
+    label: Background color
+    type: radio
+    options:
+      white: White
+      grey: Grey
+    width: 1/2
+    required: true

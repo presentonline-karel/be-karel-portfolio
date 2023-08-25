@@ -1,0 +1,81 @@
+name: Education
+icon: star
+label: "| {{ educationtitle }}"
+fields:
+  educationHeadline:
+    label: Education
+    type: headline
+    numbered: false
+  educationLabel:
+    label: Label
+    type: text
+    required: true
+  educationTitle:
+    label: Title
+    type: text
+    required: true
+  educationCard:
+    label: Education
+    type: object
+    required: true
+    fields:
+      title:
+        label: Title
+        type: text
+        width: 1/2
+      school:
+        label: School
+        type: text
+        width: 1/2
+      addWebsite:
+        label: Add school website?
+        type: toggle
+        width: 1/3
+        text: 
+          - "no"
+          - "yes"
+      website:
+        label: Website
+        type: url
+        width: 2/3
+        when:
+          addWebsite: true
+      lineA:
+        type: line
+      startDate:
+        label: Start date
+        type: date
+        width: 2/3
+      isCurrentJob:
+        label: Is current job?
+        type: toggle
+        width: 1/3
+        text: 
+          - "no"
+          - "yes"
+      endDate:
+        label: End date
+        type: date
+        when:
+          isCurrentJob: false
+        required: true
+      lineB:
+        type: line
+      paragraph:
+        label: Paragraph
+        type: writer
+        inline: true
+      tags:
+        label: Tags
+        type: tags
+  lineC:
+    type: line
+  educationImage:
+    label: Image
+    type: files
+    multiple: false
+    layout: cards
+    image:
+      ratio: 4/5
+      cover: true
+    required: true

@@ -1,0 +1,32 @@
+name: Text with image
+icon: text
+label: "| {{ textwithimagetitle }}"
+fields:
+  textWithImageHeadline:
+    label: Text with image
+    type: headline
+    numbered: false
+  textWithImageLabel:
+    label: Label
+    type: text
+  textWithImageTitle:
+    label: Title
+    type: text
+  textWithImageText:
+    label: Text
+    type: blocks
+    fieldsets:
+      - heading
+      - text
+      - list
+  lineA:
+    type: line
+  textWithImageImage:
+    label: Image
+    type: files
+    multiple: false
+    layout: cards
+    image:
+      ratio: 4/5
+      cover: true
+    required: true

@@ -4,3 +4,10 @@ fieldsets:
   - services
   - skills
   - cta
+  - textWithImage
+  - experience
+  - education
+  - process
+  - features
+  - testimonials
+  - faq

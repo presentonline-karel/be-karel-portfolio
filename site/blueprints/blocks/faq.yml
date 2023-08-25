@@ -1,0 +1,33 @@
+name: FAQ
+icon: question
+label: "| {{ faqtitle }}"
+fields:
+  faqHeadline:
+    label: FAQ
+    type: headline
+    numbered: false
+  faqTitle:
+    label: Title
+    type: text
+    required: true
+  faqParagraph:
+    label: Paragraph
+    type: writer
+    inline: true
+  faqButton:
+    label: Button
+    extends: fields/button
+  faqs:
+    label: Questions
+    type: structure
+    required: true
+    fields:
+      question:
+        label: Question
+        type: text
+        required: true
+      answer:
+        label: Answer
+        type: writer
+        inline: true
+        required: true

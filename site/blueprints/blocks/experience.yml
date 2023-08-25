@@ -1,0 +1,84 @@
+name: Experience
+icon: folder-structure
+label: "| {{ experiencetitle }}"
+fields:
+  experienceHeadline:
+    label: Experience
+    type: headline
+    numbered: false
+  experienceLabel:
+    label: Label
+    type: text
+  experienceTitle:
+    label: Title
+    type: text
+  experiences:
+    label: Experiences
+    type: structure
+    columns:
+      jobTitle:
+        width: 1/3
+      company:
+        width: 1/3
+      tags:
+        width: 1/3
+    fields:
+      jobTitle:
+        label: Job title
+        type: text
+        width: 1/2
+        required: true
+      company:
+        label: Company
+        type: text
+        width: 1/2
+        required: true
+      addWebsite:
+        label: Add company website?
+        type: toggle
+        width: 1/3
+        text: 
+          - "no"
+          - "yes"
+      website:
+        label: Website
+        type: url
+        width: 2/3
+        when:
+          addWebsite: true
+      lineA:
+        type: line
+      startDate:
+        label: Start date
+        type: date
+        width: 2/3
+      isCurrentJob:
+        label: Is current job?
+        type: toggle
+        width: 1/3
+        text: 
+          - "no"
+          - "yes"
+      endDate:
+        label: End date
+        type: date
+        when:
+          isCurrentJob: false
+        required: true
+      lineB:
+        type: line
+      paragraph:
+        label: Paragraph
+        type: writer
+        inline: true
+      tags:
+        label: Tags
+        type: tags
+  lineC:
+    type: line
+  ctaTitle:
+    label: CTA title
+    type: text
+  ctaButton:
+    label: Button
+    extends: fields/button
