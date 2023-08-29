@@ -121,6 +121,14 @@ columns:
       contentHeadline:
         label: Problem/solution section
         type: headline
+      contentLabel:
+        label: Label
+        type: text
+        required: true
+      contentTitle:
+        label: Title
+        type: text
+        required: true
       contentImage:
         label: Image
         type: files

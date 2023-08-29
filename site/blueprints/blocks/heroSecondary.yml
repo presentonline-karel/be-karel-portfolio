@@ -12,13 +12,16 @@ fields:
   heroTitle:
     label: Title
     type: text
+    required: true
   heroParagraph:
     label: Paragraph
     type: writer
     inline: true
+    required: true
   heroButtons:
     label: Buttons
     extends: fields/button
+    required: true
   line-z:
     type: line
   heroImage:

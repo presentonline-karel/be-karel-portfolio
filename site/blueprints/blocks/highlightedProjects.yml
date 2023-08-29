@@ -19,3 +19,4 @@ fields:
     label: Highlighted projects
     type: pages
     query: site.find('projects').children
+    required: true

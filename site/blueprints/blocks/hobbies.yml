@@ -1,0 +1,33 @@
+name: Hobbies
+icon: flag
+label: "| {{ hobbiestitle }}"
+fields:
+  hobbiesHeadline:
+    label: Hobbies
+    type: headline
+    numbered: false
+  hobbiesLabel:
+    label: Label
+    type: text
+    required: true
+  hobbiesTitle:
+    label: Title
+    type: text
+    required: true
+  hobbies:
+    label: Hobbies
+    type: structure
+    required: true
+    fields:
+      icon:
+        label: Icon
+        type: select
+        required: true
+        options:
+          flag: Flag
+          weight: Weight
+          camera: Camera
+      title:
+        label: Title
+        type: text
+        required: true

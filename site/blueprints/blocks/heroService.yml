@@ -1,14 +1,28 @@
-name: Hero primary
+name: Hero service
 icon: grid-top
 label: "| {{ herotitle }}"
 fields:
   heroHeadline:
-    label: Hero primary
+    label: Hero service
     type: headline
     numbered: false
-  heroLabel:
-    label: Label
+  service:
+    label: Service
     type: text
+    required: true
+  serviceSwitch:
+    label: Switch options
+    type: structure
+    fields:
+      title:
+        label: Title
+        type: text
+        required: true
+      page:
+        label: Page
+        type: pages
+        max: 1
+        required: true
   heroTitle:
     label: Title
     type: text
@@ -31,5 +45,5 @@ fields:
     layout: cards
     required: true
     image:
-      ratio: 1/1
+      ratio: 4/3
       cover: true

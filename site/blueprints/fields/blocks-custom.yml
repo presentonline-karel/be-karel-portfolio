@@ -11,3 +11,6 @@ fieldsets:
   - features
   - testimonials
   - faq
+  - hobbies
+  - relatedProjects
+  - contact
