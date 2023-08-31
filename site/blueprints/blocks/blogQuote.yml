@@ -1,0 +1,20 @@
+name: Quote
+icon: quote
+label: "| {{ quote }}"
+fields:
+  quoteHeadline:
+    label: Quote
+    type: headline
+    numbered: false
+  quote:
+    label: Quote
+    type: writer
+    inline: true
+    required: true
+  author:
+    label: Author
+    type: text
+    required: true
+  company:
+    label: Company
+    type: text

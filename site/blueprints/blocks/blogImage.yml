@@ -1,0 +1,15 @@
+name: Image
+icon: file-image
+fields:
+  imageHeadline:
+    label: Image
+    type: headline
+    numbered: false
+  blogImage:
+    label: Image
+    type: files
+    multiple: false
+    layout: cards
+    image:
+      ratio: 16/9
+      cover: true

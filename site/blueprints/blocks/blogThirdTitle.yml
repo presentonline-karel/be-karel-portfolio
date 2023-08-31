@@ -1,0 +1,12 @@
+name: Third title
+icon: headline
+label: "| {{ thirdtitle }}"
+fields:
+  thirdTitleHeadline:
+    label: Third title
+    type: headline
+    numbered: false
+  thirdTitle:
+    label: Third title
+    type: text
+    required: true

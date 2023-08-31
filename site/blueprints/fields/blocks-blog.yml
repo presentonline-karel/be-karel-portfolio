@@ -1,0 +1,10 @@
+type: blocks
+fieldsets:
+  - blogImage
+  - blogSubtitle
+  - blogParagraph
+  - blogThirdTitle
+  - blogQuote
+  - blogUnorderedList
+  - blogOrderedList
+  - blogVideo

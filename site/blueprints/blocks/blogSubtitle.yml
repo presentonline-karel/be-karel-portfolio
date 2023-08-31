@@ -1,0 +1,12 @@
+name: Subtitle
+icon: headline
+label: "| {{ blogsubtitle }}"
+fields:
+  subtitleHeadline:
+    label: Subtitle
+    type: headline
+    numbered: false
+  blogSubtitle:
+    label: Subtitle
+    type: text
+    required: true

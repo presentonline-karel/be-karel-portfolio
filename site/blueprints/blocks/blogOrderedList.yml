@@ -1,0 +1,17 @@
+name: Ordered list
+icon: list-numbers
+label: "| Add amount of items here"
+fields:
+  orderedHeadline:
+    label: Ordered list
+    type: headline
+    numbered: false
+  orderedList:
+    label: Ordered list
+    type: structure
+    fields:
+      listItem:
+        label: List item
+        type: text
+        required: true
+    required: true

@@ -1,0 +1,27 @@
+name: Video
+icon: file-video
+label: "| Youtube url or upload"
+fields:
+  videoHeadline:
+    label: Video
+    type: headline
+    numbered: false
+  videoToggle:
+    label: Youtube/upload toggle
+    type: toggle
+    text: 
+      - "Youtube url"
+      - "Video upload"
+  blogVideo:
+    label: Video
+    type: files
+    multiple: false
+    required: true
+    when:
+      videoToggle: true
+  youtubeUrl:
+    label: Youtube URL
+    type: text
+    required: true
+    when:
+      videoToggle: false

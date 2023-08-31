@@ -1,0 +1,13 @@
+name: Paragraph
+icon: text-left
+label: "| {{ paragraph }}"
+fields:
+  paragraphHeadline:
+    label: Paragraph
+    type: headline
+    numbered: false
+  paragraph:
+    label: Paragraph
+    type: writer
+    inline: true
+    required: true
