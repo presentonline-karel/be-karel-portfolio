@@ -9,6 +9,7 @@ fields:
   highlightedProjectsTitle:
     label: Title
     type: text
+    required: true
   highlightedProjectsParagraph:
     label: Paragraph
     type: writer
@@ -19,4 +20,5 @@ fields:
     label: Highlighted projects
     type: pages
     query: site.find('projects').children
+    image: icon
     required: true

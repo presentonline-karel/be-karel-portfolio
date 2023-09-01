@@ -3,7 +3,7 @@ fieldsets:
   - blogImage
   - blogSubtitle
   - blogParagraph
-  - blogThirdTitle
+  - blogSubSubtitle
   - blogQuote
   - blogUnorderedList
   - blogOrderedList

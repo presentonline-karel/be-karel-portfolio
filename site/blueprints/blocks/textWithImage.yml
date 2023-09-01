@@ -12,9 +12,11 @@ fields:
   textWithImageTitle:
     label: Title
     type: text
+    required: true
   textWithImageText:
     label: Text
     type: blocks
+    required: true
     fieldsets:
       - heading
       - text
@@ -29,4 +31,12 @@ fields:
     image:
       ratio: 4/5
       cover: true
+    width: 1/2
     required: true
+  textWithImageImagePlacement:
+    label: Image placement
+    type: toggle
+    width: 1/2
+    text: 
+      - "Image left"
+      - "Image right"

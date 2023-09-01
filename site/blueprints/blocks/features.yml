@@ -9,7 +9,6 @@ fields:
   featuresLabel:
     label: Label
     type: text
-    required: true
   featuresTitle:
     label: Title
     type: text

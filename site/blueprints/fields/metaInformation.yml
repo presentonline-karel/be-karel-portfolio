@@ -1,0 +1,22 @@
+icon: search
+
+columns:
+  - width: 1/4
+    sections:
+    fields:
+      gap-c:
+        type: gap
+
+  - width: 1/2
+    sections:
+    fields:
+      metaInformation:
+        label: Meta information
+        type: headline
+        numbered: false
+      metaTitle:
+        label: Meta title
+        type: text
+      metaDescription:
+        label: Meta description
+        type: text

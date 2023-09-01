@@ -9,6 +9,7 @@ fields:
   ctaTitle:
     label: Title
     type: text
+    required: true
   ctaParagraph:
     label: Paragraph
     type: writer
@@ -16,6 +17,7 @@ fields:
   ctaButtons:
     label: Buttons
     extends: fields/button
+    required: true
   ctaBgColor:
     label: Background color
     type: radio

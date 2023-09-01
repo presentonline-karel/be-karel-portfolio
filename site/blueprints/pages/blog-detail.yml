@@ -1,43 +1,99 @@
 title: Blog detail
+icon: book
 
-columns:
-  left:
-    width: 1/3
-    fields:
-      blogTextHeadline:
-        label: Header
-        type: headline
-      blogTitle:
-        label: Title
-        type: text
-        required: true
-      blogIntro:
-        label: Paragraph
-        type: writer
-        inline: true
-        required: true
-      tags:
-        label: Tags
-        type: tags
-        options: query
-        query: page('blog').tags.split
-        help: **e.g.** Web development, Web design
-        required: true
-      publishDate:
-        label: Publish date
-        type: date
-        required: true
-      minutesRead:
-        label: Minutes read
-        type: number
-        required: true
+tabs:
+  content:
+    icon: text
 
-  right:
-    width: 2/3
-    fields:
-      blogDetailHeadline:
-        label: Article body
-        type: headline
-      blogDetailBlocks:
-        label: Blocks
-        extends: fields/blocks-blog
+    columns:
+      left:
+        width: 1/2
+        fields:
+          blogTextHeadline:
+            label: Header
+            type: headline
+          blogTitle:
+            label: Title
+            type: text
+            required: true
+          blogIntro:
+            label: Intro
+            type: writer
+            inline: true
+            required: true
+          tag:
+            label: Tag
+            type: tags
+            options: query
+            query: page('blog').tags.split
+            help: **e.g.** Web development, Web design
+            max: 1
+            required: true
+          publishDate:
+            label: Publish date
+            type: date
+            default: today
+            step: month
+            display: MMM YY
+            width: 1/2
+            required: true
+          minutesRead:
+            label: Minutes read
+            type: number
+            width: 1/2
+            required: true
+          lineA:
+            type: line
+          coverImage:
+            label: Cover image
+            type: files
+            layout: cards
+            multiple: false
+            required: true
+            empty: Choose a cover image
+            help: Choose an image with a **1/1** ratio
+            image:
+              ratio: 1/1
+              cover: true
+
+      right:
+        width: 1/2
+        fields:
+          blogDetailHeadline:
+            label: Article body
+            type: headline
+          blogDetailBlocks:
+            label: Blocks
+            extends: fields/blocks-blog
+            required: true
+          lineB:
+            type: line
+          relatedBlogsHeadline:
+            label: Related blogs
+            type: headline
+          relatedBlogsTitle:
+            label: Title
+            type: text
+            required: true
+          relatedBlogs:
+            label: Related blogs
+            type: pages
+            query: page.siblings(false)
+            max: 3
+            image: 
+              cover: true
+              query: page.coverImage.toFile()
+            layout: cardlets
+          lineC:
+            type: line
+          customBlocksHeadline:
+            label: Building blocks
+            type: headline
+          customBlocks:
+            label: Building blocks
+            extends: fields/blocks-custom
+
+
+
+  metaInformation:
+    extends: fields/metaInformation

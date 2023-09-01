@@ -1,14 +1,20 @@
-title: PO - Starter Kit
+title: Site
 
 tabs:
   menu:
     icon: dashboard
 
     columns:
-
-      #Pages
-      - width: 1/3
+      left:
+        width: 1/3
         sections:
+          content:
+            type: fields
+            fields:
+              pagesHeadline:
+                label: Pages
+                type: headline
+                numbered: false
           listed:
             headline: Listed pages
             type: pages
@@ -24,3 +30,245 @@ tabs:
             type: pages
             status: draft
             image: icon
+
+      right:
+        width: 2/3
+        fields:
+          navigationHeadline:
+            label: Navigation
+            type: headline
+            numbered: false
+          navigation:
+            label: Navigation
+            type: structure
+            required: true
+            columns:
+              menuItem:
+                width: 2/8
+              page:
+                width: 2/8
+              id:
+                width: 1/8
+              hasSubItems:
+                width: 2/8
+              subItems:
+                width: 1/8
+            fields:
+              menuItem:
+                label: Menu item
+                type: text
+                required: true
+              page:
+                label: Page
+                type: pages
+                max: 1
+                required: true
+                width: 1/2
+                image: icon
+              id:
+                label: ID
+                type: text
+                help: "**e.g.** #services"
+                width: 1/4
+              hasSubItems:
+                label: Has subitems?
+                type: toggle
+                text:
+                  - "no"
+                  - "yes"
+                width: 1/4
+              subItems:
+                label: Sub-items
+                type: structure
+                when:
+                  hasSubitems: true
+                required: true
+                fields:
+                  menuItem:
+                    label: Menu item
+                    type: text
+                    required: true
+                  page:
+                    label: Page
+                    type: pages
+                    max: 1
+                    image: icon
+                    required: true
+                    width: 3/4
+                  id:
+                    label: ID
+                    type: text
+                    help: "**e.g.** #services"
+                    width: 1/4
+          lineA:
+            type: line
+          
+          logosHeadline:
+            label: Logos
+            type: headline
+            numbered: false
+          logoLight:
+            label: Logo light
+            type: files
+            multiple: false
+            required: true
+            layout: cards
+            width: 1/2
+            image:
+              back: "#FFFFFF"
+          logoDark:
+            label: Logo dark
+            type: files
+            multiple: false
+            required: true
+            layout: cards
+            width: 1/2
+            image:
+              back: "#40484F"
+
+
+
+  contact:
+    icon: phone
+
+    columns:
+      left:
+        width: 1/3
+        fields:
+          contactHeadline:
+            label: Contact info & social media
+            type: headline
+            numbered: false
+        
+      right:
+        width: 2/3
+        fields:
+          contactInfoHeadline:
+            label: Contact info
+            type: headline
+          email:
+            label: Email
+            type: email
+            width: 1/2
+            required: true
+          phone:
+            label: Phone
+            type: tel
+            width: 1/2
+            required: true
+          lineB:
+            type: line
+          socialsHeadline:
+            label: Social media
+            type: headline
+          socials:
+            label: Socials
+            type: structure
+            required: true
+            columns:
+              social:
+                width: 1/4
+              url:
+                width: 3/4
+            fields:
+              social:
+                type: select
+                required: true
+                options:
+                  facebook: Facebook
+                  instagram: Instagram
+                  linkedin: LinkedIn
+                  twitter: Twitter
+              url:
+                label: URL
+                type: url
+                required: true
+
+
+
+  footer:
+    icon: grid-bottom
+
+    columns:
+      left:
+        width: 1/3
+        fields:
+          footerHeadline:
+            label: Footer
+            type: headline
+            numbered: false
+      right:
+        width: 2/3
+        fields:
+          footerInfoHeadline:
+            label: Info
+            type: headline
+          footerInfoParagraph:
+            label: Paragraph
+            type: writer
+            inline: true
+          lineC:
+            type: line
+          footerMainLinksHeadline:
+            label: Main links
+            type: headline
+          footerMainLinksTitle:
+            label: Title
+            type: text
+            required: true
+          footerMainLinks:
+            label: Main links
+            type: structure
+            required: true
+            fields:
+              mainLink:
+                label: Main link
+                type: text
+                required: true
+              page:
+                label: Page
+                type: pages
+                max: 1
+                required: true
+                width: 3/4
+                image: icon
+              id:
+                label: ID
+                type: text
+                help: "**e.g.** #services"
+                width: 1/4
+          lineD:
+            type: line
+          footerServicesHeadline:
+            label: Services
+            type: headline
+          footerServicesTitle:
+            label: Title
+            type: text
+            required: true
+          footerServices:
+            label: Services
+            type: structure
+            required: true
+            fields:
+              serviceLink:
+                label: Service link
+                type: text
+                required: true
+              page:
+                label: Page
+                type: pages
+                max: 1
+                required: true
+                width: 3/4
+                image: icon
+              id:
+                label: ID
+                type: text
+                help: "**e.g.** #services"
+                width: 1/4
+
+
+
+  metaInformation:
+    extends: fields/metaInformation

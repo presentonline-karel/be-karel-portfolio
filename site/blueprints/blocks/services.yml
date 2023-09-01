@@ -12,9 +12,11 @@ fields:
   servicesTitle:
     label: Title
     type: text
+    required: true
   services:
     label: Services
     type: structure
+    required: true
     columns:
       title:
         width: 1/4
@@ -36,3 +38,4 @@ fields:
         label: Destination page
         type: pages
         max: 1
+        image: icon

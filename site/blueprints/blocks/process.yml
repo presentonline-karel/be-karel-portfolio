@@ -9,7 +9,6 @@ fields:
   processLabel:
     label: Label
     type: text
-    required: true
   processTitle:
     label: Title
     type: text

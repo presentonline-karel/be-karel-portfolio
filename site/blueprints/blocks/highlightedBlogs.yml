@@ -1,0 +1,25 @@
+name: Highlighted blogs
+icon: book
+label: "| {{ highlightedblogstitle }}"
+fields:
+  highlightedBlogsHeadline:
+    label: Highlighted blogs
+    type: headline
+    numbered: false
+  highlightedBlogsTitle:
+    label: Title
+    type: text
+    required: true
+  highlightedBlogsParagraph:
+    label: Paragraph
+    type: writer
+    inline: true
+  lineA:
+    type: line
+  highlightedBlogs:
+    label: Highlighted blogs
+    type: pages
+    query: site.find('blog').children
+    image: icon
+    max: 3
+    required: true

@@ -1,12 +1,12 @@
 name: Paragraph
 icon: text-left
-label: "| {{ paragraph }}"
+label: "| {{ blogparagraph }}"
 fields:
-  paragraphHeadline:
+  blogParagraphHeadline:
     label: Paragraph
     type: headline
     numbered: false
-  paragraph:
+  blogParagraph:
     label: Paragraph
     type: writer
     inline: true

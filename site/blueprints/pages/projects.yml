@@ -1,69 +1,80 @@
 title: Projects
+icon: grid
 
-columns:
-  left:
-    width: 1/3
-    fields:
-      projectsTextHeadline:
-        label: Header
-        type: headline
-      projectsTitle:
-        label: Title
-        type: text
-        required: true
-      projectsParagraph:
-        label: Paragraph
-        type: writer
-        inline: true
-        required: true
-      labelTags:
-        label: Label tags
-        type: text
-        required: true
-      tags:
-        label: Tags
-        type: tags
-        options:
-          - Web development
-          - Web design
-        help: **e.g.** Web development, Web design
-        required: true
+tabs:
+  content:
+    icon: text
 
-
-
-  right:
-    width: 2/3
-    sections:
-      content:
-        type: fields
+    columns:
+      left:
+        width: 1/3
         fields:
-          projectsHeadline:
-            label: Projects
+          projectsTextHeadline:
+            label: Header
             type: headline
             numbered: false
-      projectsListed:
-        label: Listed projects
-        type: pages
-        status: listed
-        layout: cards
-        size: small
-        image:
-          query: page.carouselImages.first().toFile()
-          cover: true
-      projectsUnlisted:
-        label: Unlisted projects
-        type: pages
-        status: unlisted
-        layout: cardlets
-        image:
-          query: page.carouselImages.first().toFile()
-          cover: true
-      projectsDrafts:
-        label: Drafts
-        type: pages
-        status: draft
-        layout: cardlets
-        template: project
-        image:
-          query: page.carouselImages.toFiles().first()
-          cover: true
+          projectsTitle:
+            label: Title
+            type: text
+            required: true
+          projectsParagraph:
+            label: Paragraph
+            type: writer
+            inline: true
+            required: true
+          labelTags:
+            label: Label tags
+            type: text
+            required: true
+          tags:
+            label: Tags
+            type: tags
+            options:
+              - Web development
+              - Web design
+            help: **e.g.** Web development, Web design
+            required: true
+
+
+
+      right:
+        width: 2/3
+        sections:
+          content:
+            type: fields
+            fields:
+              projectsHeadline:
+                label: Projects
+                type: headline
+                numbered: false
+          projectsListed:
+            label: Listed projects
+            type: pages
+            status: listed
+            layout: cards
+            size: small
+            image:
+              query: page.carouselImages.first().toFile()
+              cover: true
+          projectsUnlisted:
+            label: Unlisted projects
+            type: pages
+            status: unlisted
+            layout: cardlets
+            image:
+              query: page.carouselImages.first().toFile()
+              cover: true
+          projectsDrafts:
+            label: Drafts
+            type: pages
+            status: draft
+            layout: cardlets
+            template: project
+            image:
+              query: page.carouselImages.toFiles().first()
+              cover: true
+
+
+
+  metaInformation:
+    extends: fields/metaInformation

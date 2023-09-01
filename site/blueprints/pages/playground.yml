@@ -1,0 +1,117 @@
+title: Playground
+icon: grid
+
+tabs:
+  content:
+    icon: text
+
+    columns:
+      left:
+        width: 1/3
+        fields:
+          playgroundTextHeadline:
+            label: Header
+            type: headline
+            numbered: false
+          playgroundTitle:
+            label: Title
+            type: text
+            required: true
+          playgroundParagraph:
+            label: Paragraph
+            type: writer
+            inline: true
+            required: true
+          labelTags:
+            label: Label tags
+            type: text
+            required: true
+          tags:
+            label: Tags
+            type: tags
+            options:
+              - Web development
+              - Web design
+            help: **e.g.** Web development, Web design
+            required: true
+
+
+
+      right:
+        width: 2/3
+        sections:
+          content:
+            type: fields
+            fields:
+              playgroundHeadline:
+                label: Playground
+                type: headline
+                numbered: false
+              playgroundProjects:
+                label: Projects
+                type: structure
+                required: true
+                columns:
+                  title:
+                    width: 2/8
+                  tag:
+                    width: 1/8
+                  publishDate:
+                    width: 1/8
+                  paragraph:
+                    width: 2/8
+                  images:
+                    width: 2/8
+                fields: 
+                  title:
+                    label: Title
+                    type: text
+                    width: 2/4
+                    required: true
+                  tag:
+                    label: Tag
+                    type: tags
+                    options: query
+                    query: page('playground').tags.split
+                    help: **e.g.** Photography, Webmail
+                    max: 1
+                    width: 1/4
+                    required: true
+                  publishDate:
+                    label: Publish date
+                    type: date
+                    default: today
+                    step: month
+                    display: MMM YY
+                    width: 1/4
+                    required: true
+                  paragraph:
+                    label: Paragraph
+                    type: writer
+                    inline: true
+                    required: true
+                  ctaButton:
+                    label: Button
+                    extends: fields/button
+                  images:
+                    label: Images
+                    type: files
+                    layout: cards
+                    image:
+                      ratio: 3/2
+                      cover: true
+                    required: true
+              lineA:
+                type: line
+              customBlocksHeadline:
+                label: Building blocks
+                type: headline
+                numbered: false
+              customBlocks:
+                label: Building blocks
+                extends: fields/blocks-custom
+
+
+
+  metaInformation:
+    extends: fields/metaInformation

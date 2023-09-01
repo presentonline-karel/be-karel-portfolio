@@ -9,7 +9,6 @@ fields:
   educationLabel:
     label: Label
     type: text
-    required: true
   educationTitle:
     label: Title
     type: text
@@ -45,9 +44,12 @@ fields:
       startDate:
         label: Start date
         type: date
+        step: month
+        display: MMM YY
         width: 2/3
+        required: true
       isCurrentJob:
-        label: Is current job?
+        label: Ongoing?
         type: toggle
         width: 1/3
         text: 
@@ -56,6 +58,8 @@ fields:
       endDate:
         label: End date
         type: date
+        step: month
+        display: MMM YY
         when:
           isCurrentJob: false
         required: true

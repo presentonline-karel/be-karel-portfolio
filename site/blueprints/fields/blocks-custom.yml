@@ -1,6 +1,7 @@
 type: blocks
 fieldsets:
   - highlightedProjects
+  - highlightedBlogs
   - services
   - skills
   - cta

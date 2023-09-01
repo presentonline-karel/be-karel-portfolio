@@ -1,12 +1,12 @@
 name: Unordered list
 icon: list-bullet
-label: "| Add amount of items here"
+label: "| [Amount of items here]"
 fields:
-  unorderedHeadline:
+  blogUnorderedListHeadline:
     label: Unordered list
     type: headline
     numbered: false
-  unorderedList:
+  blogUnorderedList:
     label: Unordered list
     type: structure
     fields:

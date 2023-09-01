@@ -1,12 +1,12 @@
 name: Ordered list
 icon: list-numbers
-label: "| Add amount of items here"
+label: "| [Amount of items here]"
 fields:
-  orderedHeadline:
+  blogOrderedListHeadline:
     label: Ordered list
     type: headline
     numbered: false
-  orderedList:
+  blogOrderedList:
     label: Ordered list
     type: structure
     fields:

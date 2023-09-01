@@ -2,7 +2,7 @@ name: Subtitle
 icon: headline
 label: "| {{ blogsubtitle }}"
 fields:
-  subtitleHeadline:
+  blogSubtitleHeadline:
     label: Subtitle
     type: headline
     numbered: false

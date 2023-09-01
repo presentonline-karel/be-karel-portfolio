@@ -1,9 +1,9 @@
 title: Custom Page
-icon: page
+icon: box
 
 tabs:
   content:
-    icon: text
+    icon: box
 
     columns:
       - width: 1/4
@@ -11,8 +11,6 @@ tabs:
         fields:
           gap-a:
             type: gap
-      
-
 
       - width: 1/2
         sections:
@@ -31,11 +29,14 @@ tabs:
           customPageContent:
             label: Building blocks
             extends: fields/blocks-custom
-          
-
 
       - width: 1/4
         sections:
         fields:
           gap-b:
             type: gap
+
+
+  
+  metaInformation:
+    extends: fields/metaInformation

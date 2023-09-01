@@ -1,20 +1,22 @@
 name: Quote
 icon: quote
-label: "| {{ quote }}"
+label: "| {{ blogquote }}"
 fields:
-  quoteHeadline:
+  blogQuoteHeadline:
     label: Quote
     type: headline
     numbered: false
-  quote:
+  blogQuote:
     label: Quote
     type: writer
     inline: true
     required: true
-  author:
+  blogQuoteAuthor:
     label: Author
     type: text
+    width: 1/2
     required: true
-  company:
+  blogQuoteCompany:
     label: Company
     type: text
+    width: 1/2
