@@ -15,17 +15,10 @@ tabs:
       - width: 1/2
         sections:
         fields:
-          customPageHeaderHeadline:
-            label: Hero/header
-            type: headline
-          customPageHeader:
-            label: Hero/header block
-            extends: fields/blocks-hero
-          line-a:
-            type: line
           customPageContentHeadline:
-            label: Building blocks
+            label: Blocks
             type: headline
+            numbered: false
           customPageContent:
             label: Building blocks
             extends: fields/blocks-custom

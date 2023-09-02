@@ -1,5 +1,9 @@
 type: blocks
 fieldsets:
+  - heroPrimary
+  - heroSecondary
+  - heroService
+  - header
   - highlightedProjects
   - highlightedBlogs
   - services
