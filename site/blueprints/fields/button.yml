@@ -43,14 +43,10 @@ fields:
       button-tertiary: Tertiary
   destination:
     label: Link
-    type: select
-    max: 1
-    required: true
-    options:
-      internal: Internal webpage
-      external: External webpage
-      call: Call
-      email: Mail
+    type: toggle
+    text:
+      - Internal webpage
+      - External webpage
   internalPage:
     label: Internal webpage
     type: pages
@@ -59,26 +55,16 @@ fields:
     width: 3/4
     image: icon
     when:
-      destination: internal
+      destination: false
   idPage:
     label: id on page
     type: text
     width: 1/4
     when:
-      destination: internal
+      destination: false
   externalUrl:
     label: External webpage
     type: url
     required: true
     when:
-      destination: external
-  callInfo:
-    label: Info for call button
-    type: info
-    when:
-      destination: call
-  emailInfo:
-    label: Info for mail button
-    type: info
-    when:
-      destination: email
+      destination: true
