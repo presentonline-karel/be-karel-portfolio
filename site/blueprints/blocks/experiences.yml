@@ -1,4 +1,4 @@
-name: Experience
+name: Experiences
 icon: folder-structure
 label: "| {{ experiencetitle }}"
 fields:

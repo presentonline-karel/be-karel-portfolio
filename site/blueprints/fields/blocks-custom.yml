@@ -10,7 +10,7 @@ fieldsets:
   - skills
   - cta
   - textWithImage
-  - experience
+  - experiences
   - education
   - process
   - features

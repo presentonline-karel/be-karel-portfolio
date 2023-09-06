@@ -40,9 +40,19 @@ fields:
         required: true
       projects:
         label: Projects
-        type: pages
-        query: site.find('projects').children
-        image: icon
+        type: structure
+        fields:
+          anchor:
+            label: Anchor
+            type: text
+            required: true
+          project:
+            label: Project
+            type: pages
+            query: site.find('projects').children
+            image: icon
+            required: true
+            multiple: false
   lineA:
     type: line
   skillsImage:
