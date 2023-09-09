@@ -18,7 +18,53 @@ fields:
     type: line
   highlightedProjects:
     label: Highlighted projects
-    type: pages
-    query: site.find('projects').children
-    image: icon
+    type: structure
     required: true
+    columns:
+      title:
+        width: 1/4
+      intro:
+        width: 1/4
+      tags:
+        width: 1/4
+      project:
+        width: 1/4
+    fields:
+      coverImage:
+        label: Cover image
+        type: files
+        multiple: false
+        required: true
+        layout: cards
+        size: small
+        image:
+          ratio: 3/2
+          cover: true
+      title:
+        label: Project title
+        type: text
+        required: true
+        width: 3/4
+      addNewLabel:
+        label: Add new label
+        type: toggle
+        width: 1/4
+        text:
+          - "no"
+          - "yes"
+      intro:
+        label: Intro
+        type: writer
+        inline: true
+        required: true
+      tags:
+        label: Tags
+        type: tags
+        required: true
+      project:
+        label: Project page
+        type: pages
+        query: site.find('projects').children
+        image: icon
+        required: true
+        max: 1

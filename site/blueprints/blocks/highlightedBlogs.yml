@@ -18,8 +18,57 @@ fields:
     type: line
   highlightedBlogs:
     label: Highlighted blogs
-    type: pages
-    query: site.find('blog').children
-    image: icon
-    max: 3
+    type: structure
     required: true
+    columns:
+      coverImage:
+        width: 1/4
+      title:
+        width: 1/4
+      publishDate:
+        width: 1/4
+      blog:
+        width: 1/4
+    fields:
+      coverImage:
+        label: Cover image
+        type: files
+        multiple: false
+        required: true
+        layout: cards
+        size: small
+        image:
+          ratio: 3/2
+          cover: true
+      title:
+        label: Project title
+        type: text
+        required: true
+        width: 3/4
+      addNewLabel:
+        label: Add new label
+        type: toggle
+        width: 1/4
+        text:
+          - "no"
+          - "yes"
+      publishDate:
+        label: Publish date
+        type: date
+        default: today
+        step: month
+        display: MMM YY
+        width: 1/2
+        required: true
+      minutesRead:
+        label: Minutes read
+        type: number
+        width: 1/2
+        required: true
+      blog:
+        label: Blog page
+        type: pages
+        query: site.find('blog').children
+        image: icon
+        required: true
+        max: 1
