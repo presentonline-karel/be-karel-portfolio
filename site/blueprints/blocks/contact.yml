@@ -18,3 +18,11 @@ fields:
     type: writer
     inline: true
     required: true
+  lineA:
+    type: line
+  socialsHeadline:
+    label: Social media
+    type: headline
+    numbered: false
+  socials:
+    extends: fields/socials

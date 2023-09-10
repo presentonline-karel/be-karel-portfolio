@@ -162,27 +162,7 @@ tabs:
             label: Social media
             type: headline
           socials:
-            label: Socials
-            type: structure
-            required: true
-            columns:
-              social:
-                width: 1/4
-              url:
-                width: 3/4
-            fields:
-              social:
-                type: select
-                required: true
-                options:
-                  facebook: Facebook
-                  instagram: Instagram
-                  linkedin: LinkedIn
-                  twitter: Twitter
-              url:
-                label: URL
-                type: url
-                required: true
+            extends: fields/socials
 
 
 
