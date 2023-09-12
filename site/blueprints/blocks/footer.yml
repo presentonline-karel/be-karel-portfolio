@@ -1,0 +1,74 @@
+name: Footer
+icon: grid-bottom
+label: "| Footer navigation"
+fields:
+  footerInfoHeadline:
+    label: Info
+    type: headline
+    numbered: false
+  footerInfoParagraph:
+    label: Paragraph
+    type: writer
+    inline: true
+  lineC:
+    type: line
+  footerMainLinksHeadline:
+    label: Main links
+    type: headline
+    numbered: false
+  footerMainLinksTitle:
+    label: Title
+    type: text
+    required: true
+  footerMainLinks:
+    label: Main links
+    type: structure
+    required: true
+    fields:
+      mainLink:
+        label: Main link
+        type: text
+        required: true
+      page:
+        label: Page
+        type: pages
+        max: 1
+        required: true
+        width: 3/4
+        image: icon
+      id:
+        label: ID
+        type: text
+        help: "**e.g.** #services"
+        width: 1/4
+  lineD:
+    type: line
+  footerServicesHeadline:
+    label: Services
+    type: headline
+    numbered: false
+  footerServicesTitle:
+    label: Title
+    type: text
+    required: true
+  footerServices:
+    label: Services
+    type: structure
+    required: true
+    fields:
+      serviceLink:
+        label: Service link
+        type: text
+        required: true
+      page:
+        label: Page
+        type: pages
+        max: 1
+        required: true
+        width: 3/4
+        image: icon
+      id:
+        label: ID
+        type: text
+        help: "**e.g.** #services"
+        width: 1/4

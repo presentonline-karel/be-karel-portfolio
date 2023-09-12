@@ -24,7 +24,8 @@
   "require": {
     "php": ">=8.0.0 <8.3.0",
     "getkirby/cms": "^3.9",
-    "getkirby/kql": "^2.0"
+    "getkirby/kql": "^2.0",
+    "johannschopplich/kirby-headless": "^1.6"
   },
   "config": {
     "allow-plugins": {

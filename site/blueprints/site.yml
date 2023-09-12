@@ -170,83 +170,28 @@ tabs:
     icon: grid-bottom
 
     columns:
-      left:
-        width: 1/3
+      - width: 1/4
         fields:
-          footerHeadline:
+          gap-a:
+            type: gap
+      - width: 1/2
+        fields:
+          footerBlockHeadline:
             label: Footer
             type: headline
             numbered: false
-      right:
-        width: 2/3
+          footerBlock:
+            label: Footer block
+            type: blocks
+            required: true
+            max: 1
+            fieldsets:
+              - footer
+      - width: 1/4
         fields:
-          footerInfoHeadline:
-            label: Info
-            type: headline
-          footerInfoParagraph:
-            label: Paragraph
-            type: writer
-            inline: true
-          lineC:
-            type: line
-          footerMainLinksHeadline:
-            label: Main links
-            type: headline
-          footerMainLinksTitle:
-            label: Title
-            type: text
-            required: true
-          footerMainLinks:
-            label: Main links
-            type: structure
-            required: true
-            fields:
-              mainLink:
-                label: Main link
-                type: text
-                required: true
-              page:
-                label: Page
-                type: pages
-                max: 1
-                required: true
-                width: 3/4
-                image: icon
-              id:
-                label: ID
-                type: text
-                help: "**e.g.** #services"
-                width: 1/4
-          lineD:
-            type: line
-          footerServicesHeadline:
-            label: Services
-            type: headline
-          footerServicesTitle:
-            label: Title
-            type: text
-            required: true
-          footerServices:
-            label: Services
-            type: structure
-            required: true
-            fields:
-              serviceLink:
-                label: Service link
-                type: text
-                required: true
-              page:
-                label: Page
-                type: pages
-                max: 1
-                required: true
-                width: 3/4
-                image: icon
-              id:
-                label: ID
-                type: text
-                help: "**e.g.** #services"
-                width: 1/4
+          gap-b:
+            type: gap
+      
 
 
 

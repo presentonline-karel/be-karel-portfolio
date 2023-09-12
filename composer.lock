@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "c1c06139973f4b7a7378884a0d2d5bbb",
+    "content-hash": "0f8d2ee7a1c97f2cf1f55086411b43ca",
     "packages": [
         {
             "name": "claviska/simpleimage",
@@ -427,6 +427,59 @@
                 }
             ],
             "time": "2022-12-07T16:11:59+00:00"
+        },
+        {
+            "name": "johannschopplich/kirby-headless",
+            "version": "1.6.3",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johannschopplich/kirby-headless.git",
+                "reference": "fd57db72d901d43dc97c4801143733d1eb7bf386"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johannschopplich/kirby-headless/zipball/fd57db72d901d43dc97c4801143733d1eb7bf386",
+                "reference": "fd57db72d901d43dc97c4801143733d1eb7bf386",
+                "shasum": ""
+            },
+            "require": {
+                "getkirby/composer-installer": "^1.2"
+            },
+            "require-dev": {
+                "friendsofphp/php-cs-fixer": "@stable",
+                "getkirby/cms": "^3.9"
+            },
+            "type": "kirby-plugin",
+            "extra": {
+                "kirby-cms-path": false
+            },
+            "autoload": {
+                "psr-4": {
+                    "JohannSchopplich\\Headless\\": "src/classes/"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Johann Schopplich",
+                    "email": "pkg@johannschopplich.com",
+                    "homepage": "https://johannschopplich.com"
+                }
+            ],
+            "description": "Kirby, but headless only – KQL with bearer token, Express-esque middlewares & more",
+            "homepage": "https://github.com/johannschopplich/kirby-headless#readme",
+            "keywords": [
+                "headless",
+                "kirby"
+            ],
+            "support": {
+                "issues": "https://github.com/johannschopplich/kirby-headless/issues",
+                "source": "https://github.com/johannschopplich/kirby-headless/tree/v1.6.3"
+            },
+            "time": "2023-09-07T08:01:50+00:00"
         },
         {
             "name": "laminas/laminas-escaper",
