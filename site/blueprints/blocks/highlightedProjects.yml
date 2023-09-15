@@ -68,3 +68,13 @@ fields:
         image: icon
         required: true
         max: 1
+  lineB:
+    type: line
+  bgColor:
+    label: Background color
+    type: radio
+    options:
+      white: White
+      grey: Grey
+    width: 1/2
+    required: true

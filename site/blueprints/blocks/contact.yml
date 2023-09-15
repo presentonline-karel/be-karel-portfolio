@@ -26,3 +26,13 @@ fields:
     numbered: false
   socials:
     extends: fields/socials
+  lineB:
+    type: line
+  bgColor:
+    label: Background color
+    type: radio
+    options:
+      white: White
+      grey: Grey
+    width: 1/2
+    required: true

@@ -31,3 +31,13 @@ fields:
         type: writer
         inline: true
         required: true
+  lineA:
+    type: line
+  bgColor:
+    label: Background color
+    type: radio
+    options:
+      white: White
+      grey: Grey
+    width: 1/2
+    required: true

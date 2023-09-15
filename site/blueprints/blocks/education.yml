@@ -83,3 +83,13 @@ fields:
       ratio: 4/5
       cover: true
     required: true
+  lineD:
+    type: line
+  bgColor:
+    label: Background color
+    type: radio
+    options:
+      white: White
+      grey: Grey
+    width: 1/2
+    required: true

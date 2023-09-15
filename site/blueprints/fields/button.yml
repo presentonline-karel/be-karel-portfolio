@@ -21,11 +21,16 @@ fields:
     width: 1/2
     options:
       noIcon: No icon
+      chevronLeft: Chevron left
       chevronRight: Chevron right
+      chevronUp: Chevron up
       chevronDown: Chevron down
+      arrowLeft: Arrow left
       arrowRight: Arrow right
       arrowRightTop: Arrow right top
+      arrowUp: Arrow up
       arrowDown: Arrow down
+      chain: Chain
   iconPlacement:
     label: Icon place
     type: toggle
@@ -40,13 +45,19 @@ fields:
     options:
       button-primary: Primary
       button-secondary: Secondary
-      button-tertiary: Tertiary
   destination:
     label: Link
-    type: toggle
-    text:
-      - Internal webpage
-      - External webpage
+    type: toggles
+    options:
+      - value: internal
+        text: Internal page
+        icon: collapse
+      - value: external
+        text: External page
+        icon: expand
+      - value: download
+        text: Download file
+        icon: download
   internalPage:
     label: Internal webpage
     type: pages
@@ -55,16 +66,23 @@ fields:
     width: 3/4
     image: icon
     when:
-      destination: false
+      destination: internal
   idPage:
     label: id on page
     type: text
     width: 1/4
     when:
-      destination: false
+      destination: internal
   externalUrl:
     label: External webpage
     type: url
     required: true
     when:
-      destination: true
+      destination: external
+  downloadableFile:
+    label: Downloadable file
+    type: files
+    multiple: false
+    required: true
+    when:
+      destination: download

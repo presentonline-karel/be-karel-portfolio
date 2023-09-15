@@ -18,7 +18,9 @@ fields:
     label: Buttons
     extends: fields/button
     required: true
-  ctaBgColor:
+  lineA:
+    type: line
+  bgColor:
     label: Background color
     type: radio
     options:
