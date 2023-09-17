@@ -1,0 +1,70 @@
+name: Navigation
+icon: grid-top
+label: "| Navigation"
+fields:
+  navigationHeadline:
+    label: Navigation
+    type: headline
+    numbered: false
+  navigation:
+    label: Navigation
+    type: structure
+    required: true
+    columns:
+      menuItem:
+        width: 2/8
+      page:
+        width: 2/8
+      id:
+        width: 1/8
+      hasSubItems:
+        width: 2/8
+      subItems:
+        width: 1/8
+    fields:
+      menuItem:
+        label: Menu item
+        type: text
+        required: true
+      page:
+        label: Page
+        type: pages
+        max: 1
+        required: true
+        width: 1/2
+        image: icon
+      id:
+        label: ID
+        type: text
+        help: "**e.g.** #services"
+        width: 1/4
+      hasSubItems:
+        label: Has subitems?
+        type: toggle
+        text:
+          - "no"
+          - "yes"
+        width: 1/4
+      subItems:
+        label: Sub-items
+        type: structure
+        when:
+          hasSubitems: true
+        required: true
+        fields:
+          menuItem:
+            label: Menu item
+            type: text
+            required: true
+          page:
+            label: Page
+            type: pages
+            max: 1
+            image: icon
+            required: true
+            width: 3/4
+          id:
+            label: ID
+            type: text
+            help: "**e.g.** #services"
+            width: 1/4
