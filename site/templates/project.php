@@ -10,6 +10,11 @@ $data = [
     "urls" => $page->urls()->toObject()->toArray(),
     "technologies" => $page->technologies()->toArray(),
     "carouselImages" => $page->carouselImages()->toFiles()->toArray(),
+    "contentLabel" => $page->contentLabel()->value(),
+    "contentTitle" => $page->contentTitle()->value(),
+    "contentText" => $page->contentText()->toBlocks()->toArray(),
+    "contentImage" => $page->contentImage()->toFile()->toArray(),
+    "relatedProjects" => $page->relatedProjects()->toPages()->toArray(),
 ];
 
 echo \Kirby\Data\Json::encode($data);
