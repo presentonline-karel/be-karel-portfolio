@@ -167,6 +167,14 @@ tabs:
             image:
               query: page.carouselImages.first().toFile()
               cover: true
+          lineD:
+            type: line
+          customBlocksHeadline:
+            label: Building blocks
+            type: headline
+          customBlocks:
+            label: Building blocks
+            extends: fields/blocks-custom
 
 
 

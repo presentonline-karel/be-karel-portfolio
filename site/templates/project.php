@@ -24,6 +24,7 @@ $data = [
         "descriptioncard" => $page->descriptionCard()->value(),
         "tags" => $page->tags()->value(),
     ]),
+    "customBlocks" => $page->customBlocks()->toBlocks()->toArray(),
 ];
 
 echo \Kirby\Data\Json::encode($data);
