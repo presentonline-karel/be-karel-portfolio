@@ -16,6 +16,14 @@ tabs:
             label: Title
             type: text
             required: true
+            width: 3/4
+          isBlogNew:
+            label: Add "New" label
+            type: toggle
+            text: 
+              - "no"
+              - "yes"
+            width: 1/4
           blogIntro:
             label: Intro
             type: writer
@@ -71,10 +79,6 @@ tabs:
           relatedBlogsHeadline:
             label: Related blogs
             type: headline
-          relatedBlogsTitle:
-            label: Title
-            type: text
-            required: true
           relatedBlogs:
             label: Related blogs
             type: pages

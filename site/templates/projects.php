@@ -16,11 +16,13 @@ $data = [
             "id" => $project->id(),
             "title" => $project->title()->value(),
             "slug" => $project->slug(),
+            "uri" => $project->uri(),
             "cover" => $project->carouselImages()->first()?->toFile()->toArray(),
             "isprojectnew" => $project->isProjectNew()->toBoolean()->value(),
             "longtitle" => $project->longTitle()->value(),
-            "descriptioncard" => $page->descriptionCard()->value(),
-            "tags" => $page->tags()->value(),
+            "descriptioncard" => $project->descriptionCard()->value(),
+            "tags" => $project->tags()->value(),
+            "category" => $project->category()->value(),
         ])
 ];
 

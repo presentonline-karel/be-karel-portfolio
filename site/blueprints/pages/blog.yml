@@ -17,6 +17,7 @@ tabs:
             label: Title
             type: text
             required: true
+            width: 3/4
           blogsParagraph:
             label: Paragraph
             type: writer
