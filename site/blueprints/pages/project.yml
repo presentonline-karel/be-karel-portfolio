@@ -18,7 +18,10 @@ tabs:
                 width: 2/4
               period:
                 label: Period
-                type: text
+                type: date
+                default: today
+                step: month
+                display: MMM YY
                 width: 1/4
                 required: true
               isProjectNew:

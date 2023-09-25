@@ -21,8 +21,8 @@ $data = [
         "cover" => $project->carouselImages()->first()?->toFile()->toArray(),
         "isprojectnew" => $project->isProjectNew()->toBoolean()->value(),
         "longtitle" => $project->longTitle()->value(),
-        "descriptioncard" => $page->descriptionCard()->value(),
-        "tags" => $page->tags()->value(),
+        "descriptioncard" => $project->descriptionCard()->value(),
+        "tags" => $project->tags()->value(),
     ]),
     "customBlocks" => $page->customBlocks()->toBlocks()->toArray(),
 ];

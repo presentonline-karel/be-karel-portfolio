@@ -11,7 +11,7 @@ $data = [
     "projects" => $page
         ->children()
         ->listed()
-        ->sortBy('date', 'desc')
+        ->sortBy('period', 'desc')
         ->map(fn ($project) => [
             "id" => $project->id(),
             "title" => $project->title()->value(),
@@ -23,6 +23,7 @@ $data = [
             "descriptioncard" => $project->descriptionCard()->value(),
             "tags" => $project->tags()->value(),
             "category" => $project->category()->value(),
+            "period" => $page->period()->value(),
         ])
 ];
 
