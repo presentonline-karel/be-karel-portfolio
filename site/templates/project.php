@@ -14,11 +14,13 @@ $data = [
     "contentTitle" => $page->contentTitle()->value(),
     "contentText" => $page->contentText()->toBlocks()->toArray(),
     "contentImage" => $page->contentImage()->toFile()->toArray(),
+    "alttag" => $page->contentImage()->toFile()->alt()->value(),
     "relatedProjects" => $page->relatedProjects()->toPages()->map(fn ($project) => [
         "id" => $project->id(),
         "title" => $project->title()->value(),
         "slug" => $project->slug(),
         "cover" => $project->carouselImages()->first()?->toFile()->toArray(),
+        "alttag" => $project->carouselImages()->first()?->toFile()->alt()->value(),
         "isprojectnew" => $project->isProjectNew()->toBoolean()->value(),
         "longtitle" => $project->longTitle()->value(),
         "descriptioncard" => $project->descriptionCard()->value(),

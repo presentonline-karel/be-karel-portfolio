@@ -37,9 +37,13 @@ fields:
     label: Image placement
     type: toggle
     width: 1/2
-    text: 
+    text:
       - "Image left"
       - "Image right"
+  altTag:
+    label: Alt tag (temp)
+    type: text
+    width: 1/2
   lineB:
     type: line
   bgColor:

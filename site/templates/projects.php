@@ -18,6 +18,7 @@ $data = [
             "slug" => $project->slug(),
             "uri" => $project->uri(),
             "cover" => $project->carouselImages()->first()?->toFile()->toArray(),
+            "alttag" => $project->carouselImages()->first()?->toFile()->alt()->value(),
             "isprojectnew" => $project->isProjectNew()->toBoolean()->value(),
             "longtitle" => $project->longTitle()->value(),
             "descriptioncard" => $project->descriptionCard()->value(),

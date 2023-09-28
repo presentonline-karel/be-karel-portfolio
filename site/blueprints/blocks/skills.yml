@@ -64,6 +64,11 @@ fields:
       ratio: 4/5
       cover: true
     required: true
+    width: 1/2
+  altTag:
+    label: Alt tag (temp)
+    type: text
+    width: 1/2
   lineB:
     type: line
   bgColor:
