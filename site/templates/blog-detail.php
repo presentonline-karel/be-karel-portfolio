@@ -11,7 +11,7 @@ $data = [
     "publishDate" => $page->publishDate()->value(),
     "minutesRead" => $page->minutesRead()->value(),
     "coverImage" => $page->coverImage()->toFile()?->toArray(),
-    "blogDetailBlocks" => $page->blogDetailBlocks()->toBlocks()->toArray(),
+    "blogDetailBlocks" => $page->blogDetailBlocks()->toResolvedBlocks()->toArray(),
     "relatedBlogs" => $page->relatedBlogs()->toPages()->map(fn ($blog) => [
         "id" => $blog->id(),
         "blogTitle" => $blog->blogTitle()->value(),
