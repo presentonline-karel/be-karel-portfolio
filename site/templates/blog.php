@@ -11,7 +11,7 @@ $data = [
     "blogs" => $page
         ->children()
         ->listed()
-        ->sortBy('date', 'desc')
+        ->sortBy('publishDate', 'desc')
         ->map(fn ($blog) => [
             "id" => $blog->id(),
             "blogTitle" => $blog->blogTitle()->value(),
