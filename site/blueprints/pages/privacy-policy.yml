@@ -1,0 +1,35 @@
+title: Privacy policy
+icon: page
+
+tabs:
+  content:
+    icon: text-left
+
+    columns:
+      - width: 1/4
+        sections:
+        fields:
+          gap-a:
+            type: gap
+
+      - width: 1/2
+        sections:
+        fields:
+          privacyPolicyContentHeadline:
+            label: Blocks
+            type: headline
+            numbered: false
+          privacyPolicyContent:
+            label: Blocks
+            extends: fields/blocks-blog
+
+      - width: 1/4
+        sections:
+        fields:
+          gap-b:
+            type: gap
+
+
+  
+  metaInformation:
+    extends: fields/metaInformation
